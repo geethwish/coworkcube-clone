@@ -2,32 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.full-screen-menu {
+  min-width: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.container {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply font-sans;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.banner-image {
+  width: 100%;
+  object-fit: fill;
+  min-height: 350px;
+  background-image: url(https://coworkingcube.lk/wp-content/uploads/2024/02/image-10.png);
+}
+
+.line-h-custom {
+  line-height: 1.4em !important;
+}
+.bg-img {
+  width: 100%;
+  object-fit: fill;
+  min-height: 350px;
+  background-image: url(https://coworkingcube.lk/wp-content/uploads/2024/02/image-10.png);
+}
+
+@media (min-width: 1024px) {
+  .bg-img {
+    width: 100%;
+    object-fit: fill;
+    min-height: 640px;
+  }
+  .postilion-down {
+    top: 80%;
   }
 }
