@@ -23,9 +23,11 @@ const Header = () => {
                         <Link href="/"><Image src={"/images/logo.webp"} width={222} height={29} alt={'logo'}></Image></Link>
                     </div>
                     <div className="space-x-4 max-md:hidden">
-                        <Link href="/">Home</Link>
-                        <Link href="/about">About</Link>
-                        <Link href="/contact">Contact</Link>
+                        <Link href="#aboutus">About Us</Link>
+                        <Link href="#location">Location</Link>
+                        <Link href="#plans">Coworking Plans</Link>
+                        <Link href="/blog">Blog</Link>
+                        <Link href="#contactus">Contact Us</Link>
                     </div>
                     {
                         isOpen ? <Button variant={"link"} className='hidden max-md:block text-lightPrimary text-2xl' onClick={handleMenuOpen}> <MdClose /></Button> : <Button variant={"link"} className='hidden max-md:block text-lightPrimary text-2xl' onClick={handleMenuOpen}> <MdOutlineMenu /></Button>

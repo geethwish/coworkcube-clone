@@ -46,3 +46,12 @@ body {
   min-height: 100px;
   margin-bottom: -1px;
 }
+
+.price-card {
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+* {
+  scroll-behavior: smooth;
+}
