@@ -1,3 +1,10 @@
+import CoffeeMachine from "@/components/svg/coffeeMachine";
+import Network from "@/components/svg/network";
+import Printer from "@/components/svg/printer";
+import Productivity from "@/components/svg/productivity";
+import SaveMoney from "@/components/svg/saveMoney";
+import Tap from "@/components/svg/tap";
+import { Wifi } from "lucide-react";
 import { ReactElement } from "react";
 import { FaWifi } from "react-icons/fa";
 import { FaUserGroup } from "react-icons/fa6";
@@ -38,31 +45,31 @@ export const features: FeaturesType[] = [
 export const benefits: BenefitsProps[] = [
   {
     title: "Enhanced Productivity",
-    icon: <LiaUsersSolid />,
+    icon: <Productivity />,
   },
   {
     title: " Printing and Copying Facilities (at Extra Charge)",
-    icon: <TfiPrinter />,
+    icon: <Printer />,
   },
   {
     title: "High Speed Internet",
-    icon: <FaWifi />,
+    icon: <Wifi />,
   },
   {
     title: "Complimentary Tea and Coffee (Self-Serviced)",
-    icon: <MdCoffeeMaker />,
+    icon: <CoffeeMachine />,
   },
   {
     title: "Networking & Collaboration with other Professionals",
-    icon: <FaUserGroup />,
+    icon: <Network />,
   },
   {
     title: "Save Money & Time",
-    icon: <IoSpeedometerOutline />,
+    icon: <SaveMoney />,
   },
   {
     title: "Fully Equipped and Technology Ready Workspaces",
-    icon: <GiKitchenTap />,
+    icon: <Tap />,
   },
 
 ];

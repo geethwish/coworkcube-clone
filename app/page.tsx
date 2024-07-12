@@ -59,21 +59,21 @@ export default function Home() {
           <p className="text-primary text-sm">To create accessible and affordable hi-tech workspaces to professionals in Sri Lanka.</p>
         </div>
 
-        <div className="grid grid-cols-1 max-sm:grid-cols-1 sm:grid-cols-4 gap-4 mt-10 mb-10">
+        <div className="grid grid-cols-1 max-sm:grid-cols-1 sm:grid-cols-4 gap-4 mt-10 mb-10 p-4">
           {
             features.map((feature, index) => (<FeatureCard title={feature.title} variant={feature.variant} key={index} />))
           }
         </div>
 
-        <div className="mb-10">
+        <div className="mb-10 p-4">
           <h1 className="text-3xl lg:text-5xl font-bold line-h-custom md:text-5xl"><span className="text-secondary">Features</span>& Benefits of Coworking with Us:
           </h1>
         </div>
         <div className="mb-10">
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 max-sm:grid-cols-1 gap-4 max-sm:gap-0">
 
             <div className="col-span-2">
-              <div className="grid sm:grid-cols-2 max-sm:grid-cols-1 gap-4">
+              <div className="grid sm:grid-cols-2 max-sm:grid-cols-1 gap-4 p-4">
                 {
                   benefits.map((benefit, index) => (
                     <div key={index} className="flex items-center gap-2 text-primary text-md">
@@ -84,7 +84,31 @@ export default function Home() {
                 }
               </div>
             </div>
-            <div className="bg-primary">05</div>
+            <div className="banner bg-primary">
+              <div className="p-4">
+                <h1 className="text-5xl max-sm:text-4xl font-bold line-h-custom md:text-5xl text-white mt-20">State- of-the- art facility
+                </h1>
+              </div>
+
+            </div>
+
+          </div>
+          <div className="bg-primary min-h-20 text-white">
+            <div className="p-4">
+              <p className="font-semibold text-lg mb-6">
+                Why Coworking Cube?
+              </p>
+
+              <h2 className="text-2xl mb-5">
+                We revolutionize your workspace!
+              </h2>
+              <p>
+                Coworking Cube was built with technology, focus and comfort in mind. Just 5 minutes from the Makumbura Multimodal Center with multiple forms of transport, and ample parking within the Coworking Cube premises itself. Secure meeting rooms for small to medium-sized teams. Standard long-term packages and custom office solutions.
+              </p>
+              <p className="mb-2">
+                With quick access to the nearby town and delicious eateries, our coworking spaces are a comfortable place you can focus at and get your brain juices flowing.
+              </p>
+            </div>
 
           </div>
         </div>
