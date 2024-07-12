@@ -5,6 +5,8 @@ import { MdClose, MdOutlineMenu } from "react-icons/md";
 import { Button } from '../ui/button';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation'
+import { Drawer } from '../ui/drawer';
+import Contact from './ContactForm';
 
 const Header = () => {
     const pathname = usePathname()
@@ -14,6 +16,10 @@ const Header = () => {
     }
 
     console.log(pathname);
+
+    const handleContactForm = () => {
+        setIsOpen(true)
+    }
 
     return (
         <div className='relative'>
@@ -27,7 +33,7 @@ const Header = () => {
                         <Link href="#location">Location</Link>
                         <Link href="#plans">Coworking Plans</Link>
                         <Link href="/blog">Blog</Link>
-                        <Link href="#contactus">Contact Us</Link>
+                        <Link href={'#'} onClick={handleContactForm}>Contact Us</Link>
                     </div>
                     {
                         isOpen ? <Button variant={"link"} className='hidden max-md:block text-lightPrimary text-2xl' onClick={handleMenuOpen}> <MdClose /></Button> : <Button variant={"link"} className='hidden max-md:block text-lightPrimary text-2xl' onClick={handleMenuOpen}> <MdOutlineMenu /></Button>
@@ -39,6 +45,10 @@ const Header = () => {
                     <Link href={"/blog"} className='p-4 bg-slate-200 text-blue-800'>Blog</Link>
                     <Link href={"/"} className='p-4'>Home</Link>
                 </div>
+            }
+            {
+                isOpen &&
+                <Contact isOpen={isOpen} onClose={() => setIsOpen(false)} />
             }
         </div>
 
